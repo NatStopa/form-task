@@ -5,46 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>MyMusic Task</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-    <h1>Formularz dodawania kontrahenta</h1>
-    <div class="form-section">
+    <h1>Dodaj kontrahenta</h1>
+    <form class="form-section">
       <div class="full-name">
         <label for="first-name">Imię:</label>
         <input
           type="text"
           id="first-name"
           name="first-name"
-          minlength="1"
           size="20"
+          required
         />
+        <br />
         <label for="last-name">Nazwisko:</label>
-        <input
-          type="text"
-          id="last-name"
-          name="last-name"
-          minlength="1"
-          size="20"
-        />
+        <input type="text" id="last-name" name="last-name" size="20" required />
       </div>
       <div class="type">
         <label for="type">Typ kontrahenta:</label>
-        <input list="types-list" id="type" name="types-list" size="20" />
+        <input
+          list="types-list"
+          id="types"
+          name="types-list"
+          size="20"
+          required
+        />
         <datalist id="types-list">
           <option value="Osoba"></option>
           <option value="Firma"></option>
         </datalist>
       </div>
-      <div class="id-number">
-        <label for="">Numer identyfikacyjny:</label>
-        <input type="text" id="id-number" name="id-number" size="20" />
+      <div class="id-numbers">
+        <div class="pesel">
+          <label for="pesel-nr">Pesel:</label>
+          <input
+            type="text"
+            id="pesel-input"
+            name="pesel-nr"
+            size="20"
+            disabled
+            required
+          />
+          <p class="incorrect-value"></p>
+        </div>
+        <div class="nip">
+          <label for="nip-nr">NIP:</label>
+          <input
+            type="text"
+            id="nip-input"
+            name="nip-nr"
+            size="20"
+            disabled
+            required
+          />
+          <p class="incorrect-value"></p>
+        </div>
       </div>
       <div class="photo">
         <label for="photo">Zdjęcie (format JPG lub JPEG):</label>
-        <input type="file" accept="image/jpg, image/jpeg" />
+        <input type="file" accept="image/jpg, image/jpeg" required />
       </div>
-    </div>
-    <script src="src/index.js"></script>
+      <button type="submit" id="submit-button">Prześlij</button>
+    </form>
+    <script src="/src/index.js"></script>
   </body>
 </html>
