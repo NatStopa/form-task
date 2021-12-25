@@ -4,36 +4,67 @@ const clientType = document.getElementById("types");
 const pesel = document.getElementById("pesel-input");
 const nip = document.getElementById("nip-input");
 const form = document.querySelector(".form-section");
-const incorrectValue = document.querySelector(".incorrect-value");
+const incorrectPesel = document.querySelector(".incorrect-pesel");
+const incorrectNip = document.querySelector(".incorrect-nip");
 
 function validatePesel() {
   const peselValue = pesel.value;
-  if (typeof peselValue !== "string") return false;
+  if (typeof peselValue !== "string") {
+    incorrectPesel.textContent = "Nieprawidłowy pesel";
+  }
   if (
     parseInt(peselValue.substring(4, 6)) > 32 ||
     parseInt(peselValue.substring(2, 4)) > 33
   ) {
-    incorrectValue.textContent = "Nieprawidłowy pesel";
+    incorrectPesel.textContent = "Nieprawidłowy Pesel";
   }
   const weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
-  let summation = 0;
-  const controlNr = parseInt(peselValue.substring(10, 11));
+  let peselSum = 0;
+  const controlNrPesel = parseInt(peselValue.substring(10, 11));
   for (let i = 0; i < weights.length; i++) {
-    summation += parseInt(peselValue.substring(i, i + 1)) * weights[i];
+    peselSum += parseInt(peselValue.substring(i, i + 1)) * weights[i];
   }
-  summation = summation % 10;
-  let result = (10 - summation) % 10;
-  if (result === controlNr) {
+  peselSum = peselSum % 10;
+  let result = (10 - peselSum) % 10;
+  if (result === controlNrPesel) {
     return true;
   } else {
-    incorrectValue.textContent = "Nieprawidłowy pesel";
+    incorrectPesel.textContent = "Nieprawidłowy Pesel";
+  }
+}
+
+function validateNip() {
+  const nipValue = nip.value;
+  const nipValueCut = nipValue.replace(/-/g, "");
+  if (typeof nipValueCut !== "string") {
+    incorrectNip.textContent = "Nieprawidłowy NIP";
+  }
+  const weights = [6, 5, 7, 2, 3, 4, 5, 6, 7];
+  let nipSum = 0;
+  const controlNrNip = parseInt(nipValueCut.substring(9, 10));
+  for (let i = 0; i < weights.length; i++) {
+    nipSum += parseInt(nipValueCut.substring(i, i + 1)) * weights[i];
+  }
+  nipSum = nipSum % 11;
+  if (nipSum === controlNrNip) {
+    return true;
+  } else {
+    incorrectNip.textContent = "Nieprawidłowy NIP";
+  }
+}
+
+function validation() {
+  const clientTypeValue = clientType.value;
+  if (clientTypeValue === "Osoba") {
+    validatePesel();
+  } else {
+    validateNip();
   }
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  validatePesel();
-  //validateNip();
+  validation();
   //addCustomer();
 }
 
