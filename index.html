@@ -65,7 +65,15 @@
       </div>
       <div class="photo">
         <label for="photo">Zdjęcie (format JPG lub JPEG):</label>
-        <input type="file" accept="image/jpg, image/jpeg" required />
+        <input
+          type="file"
+          accept="image/jpg, image/jpeg"
+          required
+          id="photo-input"
+        />
+        <p>
+          <img id="photo-preview" alt="Uploaded photo" style="display: none" />
+        </p>
       </div>
       <button type="submit" id="submit-button">Prześlij</button>
     </form>

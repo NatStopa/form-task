@@ -6,6 +6,8 @@ const nip = document.getElementById("nip-input");
 const form = document.querySelector(".form-section");
 const incorrectPesel = document.querySelector(".incorrect-pesel");
 const incorrectNip = document.querySelector(".incorrect-nip");
+const addPhoto = document.getElementById("photo-input");
+const photoPreview = document.getElementById("photo-preview");
 
 function validatePesel() {
   const peselValue = pesel.value;
@@ -69,6 +71,13 @@ function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+function displayPhoto(event) {
+  photoPreview.src = URL.createObjectURL(event.target.files[0]);
+  photoPreview.style.display = "block";
+}
+
+addPhoto.addEventListener("change", displayPhoto);
 
 function checkCustomerType() {
   const clientTypeValue = clientType.value;
