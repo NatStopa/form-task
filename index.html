@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="photo">
-        <label for="photo">Zdjęcie (format JPG lub JPEG):</label>
+        <label for="photo">Zdjęcie (kwadratowe, format JPG lub JPEG):</label>
         <input
           type="file"
           accept="image/jpg, image/jpeg"
@@ -73,6 +73,7 @@
         />
         <p>
           <img id="photo-preview" alt="Uploaded photo" style="display: none" />
+          <div id="incorrect-photo"></div>
         </p>
       </div>
       <button type="submit" id="submit-button">Prześlij</button>

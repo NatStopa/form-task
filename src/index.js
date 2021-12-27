@@ -9,11 +9,12 @@ const incorrectNip = document.querySelector(".incorrect-nip");
 const addPhoto = document.getElementById("photo-input");
 const photoPreview = document.getElementById("photo-preview");
 const incorrectType = document.getElementById("incorrect-type");
+const incorrectPhoto = document.getElementById("incorrect-photo");
 
 function validatePesel() {
   const peselValue = pesel.value;
   if (typeof peselValue !== "string") {
-    incorrectPesel.textContent = "Nieprawidłowy pesel";
+    incorrectPesel.textContent = "Nieprawidłowy Pesel";
     return false;
   }
   if (
@@ -61,16 +62,34 @@ function validateNip() {
   }
 }
 
-function validation() {
-  const clientTypeValue = clientType.value;
-  if (clientTypeValue === "Osoba") {
-    return validatePesel();
-  } else if (clientTypeValue === "Firma") {
-    return validateNip();
-  } else {
-    incorrectType.textContent = "Wybierz typ kontrahenta";
+function validatePhoto() {
+  if (photoPreview.height !== photoPreview.width) {
+    incorrectPhoto.textContent = "Zdjęcie musi być kwadratowe";
     return false;
   }
+}
+
+function validation() {
+  const clientTypeValue = clientType.value;
+  let isValid = true;
+  if (clientTypeValue === "Osoba") {
+    validatePesel();
+    if (!validatePesel()) {
+      isValid = false;
+    }
+  } else if (clientTypeValue === "Firma") {
+    validateNip();
+    if (!validateNip()) {
+      isValid = false;
+    }
+  } else {
+    incorrectType.textContent = "Wybierz typ kontrahenta";
+    isValid = false;
+  }
+  if (!validatePhoto()) {
+    isValid = false;
+  }
+  return isValid;
 }
 
 function showMessage() {
