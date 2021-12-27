@@ -73,10 +73,15 @@ function validation() {
   }
 }
 
+function showMessage() {
+  alert("Nie znaleziono metody zapisu");
+}
+
 function handleSubmit(event) {
   const isValid = validation();
-  if (!isValid) {
-    event.preventDefault();
+  event.preventDefault();
+  if (isValid) {
+    axios.post("https://localhost:60001/Contractor/Save").catch(showMessage);
   }
 }
 
