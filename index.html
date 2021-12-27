@@ -9,7 +9,11 @@
   </head>
   <body>
     <h1>Dodaj kontrahenta</h1>
-    <form class="form-section">
+    <form
+      class="form-section"
+      action="https://localhost:60001/Contractor/Save"
+      method="post"
+    >
       <div class="full-name">
         <label for="first-name">Imię:</label>
         <input
@@ -25,17 +29,12 @@
       </div>
       <div class="type">
         <label for="type">Typ kontrahenta:</label>
-        <input
-          list="types-list"
-          id="types"
-          name="types-list"
-          size="20"
-          required
-        />
-        <datalist id="types-list">
-          <option value="Osoba"></option>
-          <option value="Firma"></option>
-        </datalist>
+        <select id="types" required>
+          <option value="Wybierz opcję">Wybierz opcję</option>
+          <option value="Osoba">Osoba</option>
+          <option value="Firma">Firma</option>
+        </select>
+        <p id="incorrect-type"></p>
       </div>
       <div class="id-numbers">
         <div class="pesel">
