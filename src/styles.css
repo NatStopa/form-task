@@ -3,6 +3,11 @@ label {
   font-size: 18px;
 }
 
+.error-message {
+  color: #b94a48;
+  font-size: 15px;
+}
+
 .form {
   border: 1px solid transparent;
   border-radius: 2px;

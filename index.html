@@ -53,7 +53,7 @@
               <option value="Osoba">Osoba</option>
               <option value="Firma">Firma</option>
             </select>
-            <p id="incorrect-type"></p>
+            <p id="incorrect-type" class="error-message"></p>
           </div>
           <div class="id-numbers">
             <div class="pesel row">
@@ -67,7 +67,7 @@
                 required
                 disabled
               />
-              <p class="incorrect-pesel"></p>
+              <p class="incorrect-pesel" class="error-message"></p>
             </div>
             <div class="nip row">
               <label for="nip-nr" class="col-sm-4">NIP:</label>
@@ -80,7 +80,7 @@
                 required
                 disabled
               />
-              <p class="incorrect-nip"></p>
+              <p class="incorrect-nip" class="error-message"></p>
             </div>
           </div>
           <div class="photo row">
@@ -101,7 +101,7 @@
                 style="display: none"
               />
             </p>
-            <div id="incorrect-photo"></div>
+            <div id="incorrect-photo" class="error-message"></div>
           </div>
           <button type="submit" id="submit-button" class="mt-3">Zapisz</button>
         </form>
