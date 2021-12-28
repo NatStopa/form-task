@@ -1,0 +1,68 @@
+label {
+  color: #304352;
+  font-size: 18px;
+}
+
+.form {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: block;
+  margin: 50px auto;
+  padding: 12px;
+  width: 524px;
+}
+
+.row {
+  width: 500px;
+}
+
+#header {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#photo-input {
+  padding-left: 0;
+}
+
+#photo-preview {
+  border: 1px solid #304352;
+  border-radius: 2px;
+  padding: 2px;
+  width: 70px;
+}
+
+#submit-button {
+  background-color: #304352;
+  border: 1px solid #304352;
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px #e5e5e5;
+  color: #ffffff;
+  height: 35px;
+  width: 100%;
+}
+
+#submit-button:hover {
+  background-color: transparent;
+  border: 1px solid #304352;
+  color: #304352;
+  transition: ease-in-out 30ms;
+}
+
+#types {
+  height: 30px;
+}
+
+@media (max-width: 765px) {
+  .form {
+    width: 320px;
+  }
+  .row {
+    padding: 10px;
+    width: 300px;
+  }
+  #photo-preview {
+    display: block;
+    margin: 10px auto;
+  }
+}
