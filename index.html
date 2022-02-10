@@ -12,6 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -31,6 +32,7 @@
                 class="col-sm-8 mb-3 text-input"
                 name="first-name"
                 required
+                autocomplete="off"
               />
             </div>
             <div class="row">
@@ -42,6 +44,7 @@
                 name="last-name"
                 size="20"
                 required
+                autocomplete="off"
               />
             </div>
           </div>
@@ -65,6 +68,7 @@
                 size="20"
                 required
                 disabled
+                autocomplete="off"
               />
               <p id="incorrect-pesel" class="error-message"></p>
             </div>
@@ -78,6 +82,7 @@
                 size="20"
                 required
                 disabled
+                autocomplete="off"
               />
               <p id="incorrect-nip" class="error-message"></p>
             </div>

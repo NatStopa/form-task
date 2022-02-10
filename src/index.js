@@ -97,10 +97,10 @@ function showMessage() {
 }
 
 function handleSubmit(event) {
-  const isValid = validation();
+  const isValidated = validation();
   event.preventDefault();
-  if (isValid) {
-    console.log("ok");
+  if (isValidated) {
+    axios.post("https://localhost:60001/Contractor/Save").catch(showMessage);
   }
 }
 
