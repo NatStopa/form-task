@@ -1,73 +1,96 @@
+body {
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+select {
+  padding: 0 !important;
+}
+
 label {
-  color: #304352;
+  color: #1e3f54;
   font-size: 18px;
 }
 
 .error-message {
-  color: #b94a48;
+  color: #ff736e;
   font-size: 15px;
 }
 
 .form {
+  background-color: rgb(255, 255, 255, 0.6);
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 3px;
   display: block;
-  margin: 50px auto;
-  padding: 12px;
-  width: 524px;
+  margin: 100px auto;
+  max-width: 500px;
+  padding: 15px;
+  width: 90%;
 }
 
-.row {
-  width: 500px;
-}
-
-#header {
+.header {
+  color: #1e3f54;
   font-size: 30px;
   font-weight: 300;
 }
 
-#photo-input {
-  padding-left: 0;
+.photo-input {
+  color: #1e3f54;
+  height: 40px;
+  padding: 0 !important;
+  width: 235px !important;
 }
 
-#photo-preview {
-  border: 1px solid #304352;
+.photo-preview {
   border-radius: 2px;
-  padding: 2px;
-  width: 70px;
+  width: 67px;
 }
 
-#submit-button {
-  background-color: #304352;
-  border: 1px solid #304352;
+.submit-button {
+  background-color: #2f7c98c5;
+  border: 1px solid transparent;
   border-radius: 2px;
-  box-shadow: 2px 2px 10px #e5e5e5;
-  color: #ffffff;
+  color: #ffffffe0;
   height: 35px;
   width: 100%;
 }
 
-#submit-button:hover {
-  background-color: transparent;
-  border: 1px solid #304352;
-  color: #304352;
+.submit-button:hover,
+::-webkit-file-upload-button:hover {
+  background-color: #2f7c984d;
+  border: 1px solid transparent;
+  color: #1e3f54;
+  cursor: pointer;
+  font-weight: 500;
   transition: ease-in-out 30ms;
 }
 
-#types {
-  height: 30px;
+.text-input {
+  padding: 3px !important;
 }
 
-@media (max-width: 765px) {
-  .form {
-    width: 320px;
-  }
-  .row {
-    padding: 10px;
-    width: 300px;
-  }
-  #photo-preview {
-    display: block;
-    margin: 10px auto;
-  }
+.text-input,
+select {
+  background-color: #ffffffd2;
+  border: 1px solid #ffffffd2;
+  border-radius: 2px;
+  color: #1e3f54;
+  height: 30px;
+  width: 315px !important;
+}
+
+.text-input:disabled {
+  background-color: #c1c8c6ab;
+  border: 1px solid #c1c8c6ab;
+}
+
+::-webkit-file-upload-button {
+  background-color: #2f7c98c5;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #ffffffe0;
+  font-size: 15px !important;
+  padding: 3px;
+  width: 100px;
 }

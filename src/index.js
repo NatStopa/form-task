@@ -4,8 +4,8 @@ const clientType = document.getElementById("types");
 const pesel = document.getElementById("pesel-input");
 const nip = document.getElementById("nip-input");
 const form = document.querySelector(".form-section");
-const incorrectPesel = document.querySelector(".incorrect-pesel");
-const incorrectNip = document.querySelector(".incorrect-nip");
+const incorrectPesel = document.getElementById("incorrect-pesel");
+const incorrectNip = document.getElementById("incorrect-nip");
 const addPhoto = document.getElementById("photo-input");
 const photoPreview = document.getElementById("photo-preview");
 const incorrectType = document.getElementById("incorrect-type");
@@ -100,7 +100,7 @@ function handleSubmit(event) {
   const isValid = validation();
   event.preventDefault();
   if (isValid) {
-    axios.post("https://localhost:60001/Contractor/Save").catch(showMessage);
+    console.log("ok");
   }
 }
 

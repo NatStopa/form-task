@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>MyMusic Task</title>
+    <title>Form Task</title>
     <link rel="stylesheet" href="/src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -12,12 +12,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="form shadow">
-        <h1 id="header">Dodaj kontrahenta</h1>
+        <h1 class="header">Dodaj kontrahenta</h1>
         <form
           class="form-section mt-3"
           action="https://localhost:60001/Contractor/Save"
@@ -29,7 +28,7 @@
               <input
                 type="text"
                 id="first-name"
-                class="col-sm-8 mb-3"
+                class="col-sm-8 mb-3 text-input"
                 name="first-name"
                 required
               />
@@ -39,7 +38,7 @@
               <input
                 type="text"
                 id="last-name"
-                class="col-sm-8 mb-3"
+                class="col-sm-8 mb-3 text-input"
                 name="last-name"
                 size="20"
                 required
@@ -61,26 +60,26 @@
               <input
                 type="text"
                 id="pesel-input"
-                class="col-sm-8"
+                class="col-sm-8 text-input"
                 name="pesel-nr"
                 size="20"
                 required
                 disabled
               />
-              <p class="incorrect-pesel" class="error-message"></p>
+              <p id="incorrect-pesel" class="error-message"></p>
             </div>
             <div class="nip row">
               <label for="nip-nr" class="col-sm-4">NIP:</label>
               <input
                 type="text"
                 id="nip-input"
-                class="col-sm-8"
+                class="col-sm-8 text-input"
                 name="nip-nr"
                 size="20"
                 required
                 disabled
               />
-              <p class="incorrect-nip" class="error-message"></p>
+              <p id="incorrect-nip" class="error-message"></p>
             </div>
           </div>
           <div class="photo row">
@@ -89,13 +88,14 @@
             >
             <input
               type="file"
-              class="col-sm-6"
+              class="col-sm-6 photo-input"
               accept="image/jpg, image/jpeg"
               required
               id="photo-input"
             />
             <p class="col-sm-2">
               <img
+                class="photo-preview"
                 id="photo-preview"
                 alt="Uploaded photo"
                 style="display: none"
@@ -103,7 +103,9 @@
             </p>
             <div id="incorrect-photo" class="error-message"></div>
           </div>
-          <button type="submit" id="submit-button" class="mt-3">Zapisz</button>
+          <button type="submit" id="submit-button" class="mt-3 submit-button">
+            Zapisz
+          </button>
         </form>
       </div>
     </div>
