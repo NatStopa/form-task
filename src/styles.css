@@ -53,6 +53,7 @@ label {
   border-radius: 2px;
   color: #ffffffe0;
   height: 35px;
+  margin-top: 16px;
   width: 100%;
 }
 
@@ -94,3 +95,71 @@ select {
   padding: 3px;
   width: 100px;
 }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  body {
+    background-image: url("./background.jpg");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 250%;
+  }
+  .form {
+    margin: 120px auto;
+  }
+  .photo-input {
+    width: 50% !important;
+  }
+  .photo-preview {
+    width: 55px;
+  }
+  .text-input,
+  select {
+    width: 65% !important;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    background-image: url("./background.jpg");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 350%;
+  }
+  label {
+    font-size: 15px;
+  }
+  .error-message {
+    font-size: 12px;
+  }
+  .form {
+    margin: 40px auto;
+    padding: 7px;
+  }
+  .header {
+    font-size: 25px;
+  }
+  .photo-input {
+    margin: 10px;
+    width: 90% !important;
+  }
+  .photo-paragraph {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+  }
+  .photo-preview {
+    width: 60px;
+  }
+  .submit-button {
+    margin-top: 5px;
+  }
+  .text-input,
+  select {
+    height: 25px;
+    font-size: 15px;
+    width: 60% !important;
+  }
+  ::-webkit-file-upload-button {
+    margin-top: 10px;
+  }
+} ;

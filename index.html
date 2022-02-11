@@ -25,22 +25,22 @@
         >
           <div class="full-name">
             <div class="row">
-              <label for="first-name" class="col-sm-4">Imię:</label>
+              <label for="first-name" class="col-4">Imię:</label>
               <input
                 type="text"
                 id="first-name"
-                class="col-sm-8 mb-3 text-input"
+                class="col-8 mb-3 text-input"
                 name="first-name"
                 required
                 autocomplete="off"
               />
             </div>
             <div class="row">
-              <label for="last-name" class="col-sm-4">Nazwisko:</label>
+              <label for="last-name" class="col-4">Nazwisko:</label>
               <input
                 type="text"
                 id="last-name"
-                class="col-sm-8 mb-3 text-input"
+                class="col-8 mb-3 text-input"
                 name="last-name"
                 size="20"
                 required
@@ -49,8 +49,8 @@
             </div>
           </div>
           <div class="type row">
-            <label for="type" class="col-sm-4">Typ kontrahenta:</label>
-            <select id="types" class="col-sm-8" required>
+            <label for="type" class="col-4">Typ kontrahenta:</label>
+            <select id="types" class="col-8" required>
               <option value="Wybierz opcję">Wybierz opcję</option>
               <option value="Osoba">Osoba</option>
               <option value="Firma">Firma</option>
@@ -59,11 +59,11 @@
           </div>
           <div class="id-numbers">
             <div class="pesel row">
-              <label for="pesel-nr" class="col-sm-4">Pesel:</label>
+              <label for="pesel-nr" class="col-4">Pesel:</label>
               <input
                 type="text"
                 id="pesel-input"
-                class="col-sm-8 text-input"
+                class="col-8 text-input"
                 name="pesel-nr"
                 size="20"
                 required
@@ -73,11 +73,11 @@
               <p id="incorrect-pesel" class="error-message"></p>
             </div>
             <div class="nip row">
-              <label for="nip-nr" class="col-sm-4">NIP:</label>
+              <label for="nip-nr" class="col-4">NIP:</label>
               <input
                 type="text"
                 id="nip-input"
-                class="col-sm-8 text-input"
+                class="col-8 text-input"
                 name="nip-nr"
                 size="20"
                 required
@@ -98,7 +98,7 @@
               required
               id="photo-input"
             />
-            <p class="col-sm-2">
+            <p class="col-sm-2 photo-paragraph">
               <img
                 class="photo-preview"
                 id="photo-preview"
@@ -108,7 +108,7 @@
             </p>
             <div id="incorrect-photo" class="error-message"></div>
           </div>
-          <button type="submit" id="submit-button" class="mt-3 submit-button">
+          <button type="submit" id="submit-button" class="submit-button">
             Zapisz
           </button>
         </form>
