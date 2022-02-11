@@ -29,9 +29,12 @@ Form asks for full name, client type, Pesel/NIP number and a photo.
 * Validation of Pesel number and NIP
 * Validation of photo: client can add only square photo in jpg/jpg
 * It shows added photo preview
+* Fully rensponsive on all devices
 
 ## Screenshots
-![Example screenshot](./src/screenshot.png)
+![Example screenshot Desktop](./src/screenshot.png)
+<img src="./src/screenshotipad.jpeg" width="575"/>
+<img src="./src/screenshotiphone.jpeg" width="425"/>
 
 ## Project status
 Project is: _no longer being worked on_ 
