@@ -34,7 +34,7 @@ Form asks for full name, client type, Pesel/NIP number and a photo.
 ## Screenshots
 ![Example screenshot Desktop](./src/screenshot.png)
 <img src="./src/screenshotipad.jpeg" width="475"/>
-<img src="./src/screenshotiphone.jpeg" width="325"/>
+<img src="./src/screenshotiphone.jpeg" width="350"/>
 
 ## Project status
 Project is: _no longer being worked on_ 
