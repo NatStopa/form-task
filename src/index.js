@@ -74,19 +74,19 @@ function validation() {
   let isValid = true;
   if (clientTypeValue === "Osoba") {
     validatePesel();
-    if (!validatePesel()) {
+    if (validatePesel() === false) {
       isValid = false;
     }
   } else if (clientTypeValue === "Firma") {
     validateNip();
-    if (!validateNip()) {
+    if (validateNip() === false) {
       isValid = false;
     }
   } else {
     incorrectType.textContent = "Wybierz typ kontrahenta";
     isValid = false;
   }
-  if (!validatePhoto()) {
+  if (validatePhoto() === false) {
     isValid = false;
   }
   return isValid;
