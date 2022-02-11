@@ -10,7 +10,6 @@
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Project Status](#project-status)
-* [Sources](#sources)
 * [Author](#author)
 
 ## General Information
@@ -22,6 +21,8 @@ Form asks for full name, client type, Pesel/NIP number and a photo.
 * HTML5
 * CSS3
 * JavaScript
+* Bootstrap v5.1
+* Axios
 
 ## Features
 * When client type is chosen it asks for: Pesel number for individual clients, or NIP number for companies
@@ -30,11 +31,10 @@ Form asks for full name, client type, Pesel/NIP number and a photo.
 * It shows added photo preview
 
 ## Screenshots
+![Example screenshot](./src/screenshot.png)
 
 ## Project status
 Project is: _no longer being worked on_ 
-
-## Sources
 
 ## Author
 Created by [Nat Stopa](https://natstopa-portfolio.netlify.app/)
